@@ -1,0 +1,57 @@
+$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+
+$mainFontColor           : #101010;
+$mainFontSize            : 18px;
+$mainFontWeight          : 400;
+$mainLineHeight          : 1.4;
+
+
+$contentWidth     : 1440px;
+$cardWidth-4      : calc(100% / 4 - 30px);
+$cardWidth-3      : calc(100% / 3 - 25px);
+$cardWidth-2      : calc(100% / 2 - 25px);
+$cardWidth-1      : 100%;
+$cardHeight       : 290px;
+
+$desktopWidth            : 1280px;
+$smDesktopWidth          : 1024px;
+$tableWidth              : 768px;
+$smTableWidth            : 640px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;
+
+$title-text-size         :49px;
+$menu-text-size          :34px;
+
+$menu-color              :#26de81;
+$menu-li-color           :#ffffff;
+$menu-li-hover-color     :#8854d0;
+$pseudo-menu-color       :#d8d8d841;
+
+
+$burger-color            : #8854d0;
+$card-color              : #2694de;
+$card-shadow-color       : #9292920e;
+$card-amount-color       : #7033FF;
+$card-checked-color      : #8854d04d;
+$main-card-filter        : #01ffb30e;
+
+$switcher-border-color   : #8854d0;
+
+$default-color           : #ffffff;
+$primary-color           : #444ce0;
+$success-color           : #26de81;
+$danger-color            : #fc5c64;
+$warning-color           : #fed130b9;
+$light-color             : #999999;
+$purple-color            : #8854d0;
+
+$neutral-primary         : #303133;
+$neutral-regular         : #606266;
+$neutral-secondary       : #909399;
+$neutral-placeholder     : #C0C4CC;
+
+$border-base             : #DCDFE6;
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
