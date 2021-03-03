@@ -1,5 +1,3 @@
-/* eslint-disable import/no-cycle */
-/* eslint-disable class-methods-use-this */
 import { createDomElement } from '@js/utils/createDomElement.js';
 import TagsArea from './tagsArea';
 

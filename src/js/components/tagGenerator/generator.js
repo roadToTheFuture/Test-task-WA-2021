@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import { createDomElement } from '@js/utils/createDomElement.js';
 import Form from './components/form';
 import TagsArea from './components/tagsArea';
