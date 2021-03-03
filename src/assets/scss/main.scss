@@ -1,2 +1,55 @@
 @import "utils/reset";
-@import "utils/vars";
+
+header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px solid black;
+
+  .generator__form {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .generator__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin-top: 10px;
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+
+  .tag__name {
+    max-width: 80px;
+    margin-right: 5px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  .tag__icon {
+    cursor: pointer;
+  }
+}
