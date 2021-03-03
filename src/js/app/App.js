@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
-import Header from '../header/header';
-import Footer from '../footer/footer';
-import Main from '../main/main';
+import Header from '../components/header/header';
+import Footer from '../components/footer/footer';
+import Main from '../components/main/main';
 
 export default class App {
   constructor() {
