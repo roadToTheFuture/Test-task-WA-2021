@@ -1,4 +1,4 @@
-import { createDomElement } from '@js/utils/createDomElement.js';
+import { createDomElement } from '@js/utils/createDomElement';
 import Form from './components/form/form';
 import TagsArea from './components/tagsArea/tagsArea';
 
