@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import Main from '../components/main/main';

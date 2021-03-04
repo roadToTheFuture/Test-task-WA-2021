@@ -1,4 +1,4 @@
-import { createDomElement } from '@js/utils/createDomElement.js';
+import { createDomElement } from '@js/utils/createDomElement';
 import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/localStorage';
 
 export default class Tag {

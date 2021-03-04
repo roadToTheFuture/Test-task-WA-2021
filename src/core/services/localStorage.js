@@ -1,4 +1,4 @@
-const DEVICE_ID_NAME = 'tags';
+import { DEVICE_ID_NAME } from '@js/constants/constants';
 
 const saveDeviceIdInStorage = (deviceId) => {
   const stringify = JSON.stringify(deviceId);
