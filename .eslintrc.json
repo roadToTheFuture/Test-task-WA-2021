@@ -17,6 +17,7 @@
     "import/no-unresolved": "off",
     "import/no-cycle":"off",
     "class-methods-use-this": "off",
+    "no-unused-vars": "off",
     "no-param-reassign": [
       "error",
       {
