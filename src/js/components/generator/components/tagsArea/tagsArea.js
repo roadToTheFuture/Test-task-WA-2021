@@ -1,5 +1,5 @@
 import { createDomElement } from '@js/utils/createDomElement.js';
-import Tag from './tag';
+import Tag from '../tag/tag';
 
 export default class TagsArea {
   getTags() {

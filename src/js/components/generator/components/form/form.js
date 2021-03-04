@@ -1,6 +1,6 @@
 import { createDomElement } from '@js/utils/createDomElement.js';
-import Tag from './tag';
-import TagsArea from './tagsArea';
+import Tag from '../tag/tag';
+import TagsArea from '../tagsArea/tagsArea';
 
 export default class Form {
   constructor() {
