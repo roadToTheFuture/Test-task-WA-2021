@@ -1,14 +1,10 @@
 import { createDomElement } from '@js/utils/createDomElement.js';
-import TagsArea from '../tagsArea/tagsArea';
+import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/localStorage';
 
 export default class Tag {
-  constructor() {
-    this.tagsArea = new TagsArea();
-  }
-
   deleteTag(element) {
     const dataId = element.dataset.id;
-    const arrayOfTags = this.tagsArea.getTags();
+    const arrayOfTags = getDeviceIdFromStorage();
 
     arrayOfTags.forEach((item, index) => {
       if (item.id === +dataId) {
@@ -16,7 +12,7 @@ export default class Tag {
       }
     });
 
-    localStorage.setItem('tags', JSON.stringify(arrayOfTags));
+    saveDeviceIdInStorage(arrayOfTags);
     element.remove();
   }
 

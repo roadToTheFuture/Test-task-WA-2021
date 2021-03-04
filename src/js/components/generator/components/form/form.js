@@ -1,14 +1,13 @@
 import { createDomElement } from '@js/utils/createDomElement';
+import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/localStorage';
 import GetDoomElement from '@js/utils/getDoomElement';
 import Tag from '../tag/tag';
-import TagsArea from '../tagsArea/tagsArea';
 
 export default class Form extends GetDoomElement {
   constructor() {
     super();
     this.tag = new Tag();
-    this.tagsArea = new TagsArea();
-    this.arrayOfTags = this.tagsArea.getTags();
+    this.arrayOfTags = getDeviceIdFromStorage();
   }
 
   readonly() {
@@ -41,7 +40,7 @@ export default class Form extends GetDoomElement {
 
     this.arrayOfTags.push(tagId);
     tag.dataset.id = tagId.id;
-    localStorage.setItem('tags', JSON.stringify(this.arrayOfTags));
+    saveDeviceIdInStorage(this.arrayOfTags);
     area.append(tag);
     tagName.value = '';
   }
