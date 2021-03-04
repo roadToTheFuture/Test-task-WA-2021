@@ -3,16 +3,11 @@ import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/l
 
 export default class Tag {
   deleteTag(element) {
-    const dataId = element.dataset.id;
+    const dataId = Number(element.dataset.id);
     const arrayOfTags = getDeviceIdFromStorage();
+    const updateArray = arrayOfTags.filter((item) => item.id !== dataId);
 
-    arrayOfTags.forEach((item, index) => {
-      if (item.id === +dataId) {
-        arrayOfTags.splice(index, 1);
-      }
-    });
-
-    saveDeviceIdInStorage(arrayOfTags);
+    saveDeviceIdInStorage(updateArray);
     element.remove();
   }
 
@@ -21,7 +16,9 @@ export default class Tag {
       const currentElement = event.target;
       const readoly = tag.classList.contains('readonly');
 
-      if (currentElement.closest('svg') && !readoly) this.deleteTag(tag);
+      if (currentElement.closest('svg') && !readoly) {
+        this.deleteTag(tag);
+      }
     });
   }
 
