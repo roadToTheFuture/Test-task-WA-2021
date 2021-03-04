@@ -1,4 +1,5 @@
-@import "utils/reset";
+@import "./utils/reset";
+@import "./utils/vars";
 
 header {
   padding-top: 100px;
@@ -42,13 +43,13 @@ header {
     }
 
     &_text {
-      border: 1px solid black;
+      border: 1px solid $border-color;
       margin-right: 10px;
     }
 
     &_btn {
       cursor: pointer;
-      border: 1px solid black;
+      border: 1px solid $submit-border-color;
     }
   }
 }
@@ -61,7 +62,7 @@ header {
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 10px;
-  border: 1px solid black;
+  border: 1px solid $tag-border-color;
   border-radius: 20px;
 
   &__name {
@@ -75,7 +76,7 @@ header {
     cursor: pointer;
 
     &:hover {
-      color: blue;
+      color: $tag-delete_hover;
     }
   }
 
@@ -126,8 +127,6 @@ header {
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
     font-size: 2em;
 
     &__name {
