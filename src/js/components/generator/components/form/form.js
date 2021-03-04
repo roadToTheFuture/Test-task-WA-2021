@@ -1,19 +1,22 @@
-import { createDomElement } from '@js/utils/createDomElement.js';
+import { createDomElement } from '@js/utils/createDomElement';
+import GetDoomElement from '@js/utils/getDoomElement';
 import Tag from '../tag/tag';
 import TagsArea from '../tagsArea/tagsArea';
 
-export default class Form {
+export default class Form extends GetDoomElement {
   constructor() {
+    super();
     this.tag = new Tag();
     this.tagsArea = new TagsArea();
     this.arrayOfTags = this.tagsArea.getTags();
   }
 
   readonly() {
-    const checkbox = document.querySelector('.generator__form_chbox');
-    const input = document.querySelector('.generator__form_text');
-    const button = document.querySelector('.generator__form_btn');
-    const tags = document.querySelectorAll('.tag');
+    const generator = this.getGenerator();
+    const checkbox = generator.querySelector('.generator__form_chbox');
+    const input = generator.querySelector('.generator__form_text');
+    const button = generator.querySelector('.generator__form_btn');
+    const tags = generator.querySelectorAll('.tag');
 
     if (checkbox.checked) {
       input.disabled = true;
@@ -27,8 +30,9 @@ export default class Form {
   }
 
   addNewTag() {
-    const area = document.querySelector('.generator__area');
-    const tagName = document.querySelector('.generator__form_text');
+    const generator = this.getGenerator();
+    const area = generator.querySelector('.generator__area');
+    const tagName = generator.querySelector('.generator__form_text');
     const tag = this.tag.render(tagName.value);
     const tagId = {
       id: this.arrayOfTags.length,
