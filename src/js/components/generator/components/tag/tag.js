@@ -1,13 +1,13 @@
 import { createDomElement } from '@js/utils/createDomElement';
-import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/localStorage';
+import { saveTagIdInStorage, getTagIdFromStorage } from '@/core/services/localStorage';
 
 export default class Tag {
   deleteTag(element) {
     const dataId = Number(element.dataset.id);
-    const arrayOfTags = getDeviceIdFromStorage();
+    const arrayOfTags = getTagIdFromStorage();
     const updateArray = arrayOfTags.filter((item) => item.id !== dataId);
 
-    saveDeviceIdInStorage(updateArray);
+    saveTagIdInStorage(updateArray);
     element.remove();
   }
 

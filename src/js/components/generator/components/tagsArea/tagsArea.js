@@ -1,12 +1,12 @@
 import { createDomElement } from '@js/utils/createDomElement';
-import { saveDeviceIdInStorage, getDeviceIdFromStorage } from '@/core/services/localStorage';
+import { saveTagIdInStorage, getTagIdFromStorage } from '@/core/services/localStorage';
 import Tag from '../tag/tag';
 
 export default class TagsArea {
   render() {
     const tag = new Tag();
     const tagsArea = createDomElement('div', 'generator__area', '', '');
-    const tagsInArray = getDeviceIdFromStorage();
+    const tagsInArray = getTagIdFromStorage();
     if (tagsInArray) {
       tagsInArray.forEach((item, index) => {
         const newTag = tag.render(item.value);
@@ -14,7 +14,7 @@ export default class TagsArea {
         item.id = index;
         tagsArea.append(newTag);
       });
-      saveDeviceIdInStorage(tagsInArray);
+      saveTagIdInStorage(tagsInArray);
     }
     return tagsArea;
   }
